@@ -1,14 +1,213 @@
 :root {
-    --primarycolor: rgba(212, 0, 255, 0.137);
-    --secondcolor: #ff448f;
+    --bg-color: rgb(0, 0, 0);
+    --cream-color: #e5e5e5;
+}
+
+* {
+    font-family: "Raleway", sans-serif;
 }
 
 body {
-    background-color: white;
+    background-image: url("../img/programmer.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    overflow-x: hidden;
+}
+
+/** INICIO  */
+
+#inicio {
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+        url(/img/bg-banner.png);
+    background-size: cover;
+    background-position: bottom;
+}
+
+.navbar {
+    background-color: rgba(0, 0, 0, 0.25);
+}
+
+.nav-logo {
+    width: auto;
+    max-height: 100px;
+    min-height: 75px;
+}
+
+.navbar-toggler-icon {
+    background-image: var(--bs-navbar-toggler-icon-bg);
+}
+
+.nav-item a {
+    color: var(--bg-color);
+}
+
+.nav-link {
+    margin-left: 2px;
+    margin-right: 2px;
+}
+
+.text-hover-yellow:hover {
+    background-color: var(--secondcolor);
+    color: #ffe600 !important;
+}
+
+/** ABOUT ME */
+
+#sobremi {
+    background-color: rgba(255, 255, 255, 0.85);
+}
+
+.presentacion p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    margin-top: 15%;
+    letter-spacing: 5px;
+}
+
+.presentacion h1 {
+    font-size: 55px;
+    margin-bottom: 25px;
+    letter-spacing: 5px;
+}
+
+.presentacion h4 {
+    max-width: 700px;
+    margin: 25px auto;
+    font-size: 18px;
+    text-align: center;
+}
+
+.avatar {
+    height: 300px;
+    width: auto;
+}
+
+.icons {
+    font: 2em sans-serif;
+}
+
+/** TIMELINE */
+
+.main-timeline {
+    position: relative;
+}
+
+.main-timeline::after {
+    content: "";
+    position: absolute;
+    width: 6px;
+    background-color: #939597;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+}
+
+.timeline {
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+}
+
+.timeline::after {
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -13px;
+    background-color: #939597;
+    border: 5px solid #f5df4d;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.left {
+    padding: 0px 40px 20px 0px;
+    left: 0;
+}
+
+.right {
+    padding: 0px 0px 20px 40px;
+    left: 50%;
+}
+
+.left::before {
+    content: " ";
+    position: absolute;
+    top: 18px;
+    z-index: 1;
+    right: 30px;
+    border: medium solid white;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent white;
+}
+
+.right::before {
+    content: " ";
+    position: absolute;
+    top: 18px;
+    z-index: 1;
+    left: 30px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+}
+
+.right::after {
+    left: -12px;
+}
+
+/** HABILIDADES */
+
+#habilidades {
+    background-color: rgba(255, 255, 255, 0.85);
+}
+
+.progress {
+    height: 25px;
 }
 
 
+/** CONTACTO */
+
+#message {
+    height: 10rem;
+}
+
 /** MOBILE PARAMS  */
 @media screen and (max-width: 767px) {
-   
+
+    /** TIMELINE */
+    .main-timeline::after {
+        left: 31px;
+    }
+
+    .timeline {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+    }
+
+    .timeline::before {
+        left: 60px;
+        border: medium solid white;
+        border-width: 10px 10px 10px 0;
+        border-color: transparent white transparent transparent;
+    }
+
+    .right {
+        left: 0px;
+    }
+
+    .left::after,
+    .right::after {
+        left: 18px;
+    }
+
+    .left::before {
+        right: auto;
+    }
 }
