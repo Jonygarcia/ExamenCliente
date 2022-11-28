@@ -69,4 +69,3 @@ function mouseOut() {
     this.classList.remove("text-warning");
     this.classList.add("text-white");
 }
-

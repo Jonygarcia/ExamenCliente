@@ -1,7 +1,6 @@
 "use strict";
 
 function validateForm() {
-
     let regName = /^[a-zA-ZÑñÁáÉéÍíÓóÚúÜü\s]+$/;
     let regPhone = /^\d{9}$/;
     let regMail = /^\w+@(\w+\.)+\w{2,4}$/;
@@ -20,7 +19,7 @@ function validateForm() {
     }
 
     if (!regName.exec(name.value)) {
-        alert("El nombre solo admite letas y espacios")
+        alert("El nombre solo admite letas y espacios");
         name.focus();
         return false;
     }
@@ -33,7 +32,7 @@ function validateForm() {
     }
 
     if (!regPhone.exec(phonenumber.value)) {
-        alert("El número debe contener 9 dígitos numéricos")
+        alert("El número debe contener 9 dígitos numéricos");
         name.focus();
         return false;
     }
@@ -53,7 +52,7 @@ function validateForm() {
     }
 
     if (!regMail.exec(email.value)) {
-        alert("El email no tiene el formato correcto")
+        alert("El email no tiene el formato correcto");
         email.focus();
         return false;
     }
@@ -71,5 +70,4 @@ function validateForm() {
 window.onload = function () {
     let form = document.getElementById("contactForm");
     form.onsubmit = validateForm;
-}
-
+};
