@@ -8,7 +8,7 @@
 }
 
 body {
-    background-image: url("../img/programmer.jpg");
+    background-image: url("../img/programmer.png");
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -109,6 +109,13 @@ body {
     position: relative;
     background-color: inherit;
     width: 50%;
+    -webkit-transition-delay: 1s;
+    -o-transition-delay: 1s;
+    transition-delay: 2s;
+    -webkit-transition: 1s;
+    -o-transition: 1s;
+    transition: 1s;
+    opacity: 0;
 }
 
 .timeline::after {
@@ -170,6 +177,25 @@ body {
     height: 25px;
 }
 
+.php{
+    animation: php 3s ease-in-out 0.5s forwards;
+}
+.javascript{
+    animation: javascript 3s ease-in-out 0.5s forwards;
+}
+.java{
+    animation: java 3s ease-in-out 0.5s forwards;
+}
+.mysql{
+    animation: mysql 3s ease-in-out 0.5s forwards;
+}
+.html{
+    animation: html 3s ease-in-out 0.5s forwards;
+}
+.css{
+    animation: css 3s ease-in-out 0.5s forwards;
+}
+
 
 /** CONTACTO */
 
@@ -192,6 +218,62 @@ body {
 .link-footer {
     background-color: rgb(27, 27, 27);
 }
+
+
+/** ANIMACIONES */
+
+/* FADE TEXT BANNER */
+.hide-text{
+    animation: fade 3.5s;
+    
+}
+@keyframes fade{
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
+
+.show-text{
+    animation: fade 3.5s;
+   
+}
+
+/* SCROLL TIMELINE */
+
+.inView {
+    opacity: 1;
+    -webkit-transform: translateY(0px) rotate(0deg) translateZ(0);
+    transform: translateY(0px) rotate(0deg) translateZ(0);
+}
+
+/* FILL PROGRESS BARS */
+
+@keyframes php {
+    0%{width: 0;}
+    100%{width: 85%;}
+}
+@keyframes javascript {
+    0%{width: 0;}
+    100%{width: 72%;}
+}
+@keyframes java {
+    0%{width: 0;}
+    100%{width: 70%;}
+}
+@keyframes mysql {
+    0%{width: 0;}
+    100%{width: 75%;}
+}
+@keyframes html {
+    0%{width: 0;}
+    100%{width: 90%;}
+}
+@keyframes css {
+    0%{width: 0;}
+    100%{width: 77%;}
+}
+
+
+
 
 /** TABLET PARAMS */
 
