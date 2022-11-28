@@ -3,8 +3,6 @@
 const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
 const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
 
-
-
 // Mostrar el mensaje de bienvenidos con delay con un efecto fade
 function fadeText() {
     let presentacion = document.getElementsByClassName("presentacion");
