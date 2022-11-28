@@ -62,7 +62,7 @@ body {
 .presentacion p {
     font-size: 16px;
     margin-bottom: 20px;
-    margin-top: 15%;
+    margin-top: 30vh;
     letter-spacing: 5px;
 }
 
@@ -177,8 +177,43 @@ body {
     height: 10rem;
 }
 
+.div-phone  {
+    padding-left: 20px;
+}
+
+.badge {
+    rotate: -10deg;
+    margin-left: 25px;
+    margin-top: 25px;
+}
+
+/** FOOTER */
+
+.link-footer {
+    background-color: rgb(27, 27, 27);
+}
+
+/** TABLET PARAMS */
+
+@media screen and (max-width: 991px) {
+
+    .presentacion p {
+        margin-top: 25vh; 
+    }
+
+    .badge {
+        rotate: -10deg;
+        margin-left: 23px;
+        margin-top: 21px;
+    }
+}
+
 /** MOBILE PARAMS  */
 @media screen and (max-width: 767px) {
+
+    .presentacion p {
+        margin-top: 20vh;
+    }
 
     /** TIMELINE */
     .main-timeline::after {
@@ -209,5 +244,16 @@ body {
 
     .left::before {
         right: auto;
+    }
+
+    /** CONTACTO */
+    .div-phone  {
+        padding-left: 0px;
+    }
+
+    .badge {
+        rotate: -10deg;
+        margin-left: 18px;
+        margin-top: 20px;
     }
 }
