@@ -17,6 +17,7 @@
 
   <script defer src="./js/bootstrap.bundle.js"></script>
   <script defer src="./js/custom.js"></script>
+  <script defer src="./js/validate.js"></script>
   <title>Jonatan García</title>
 </head>
 
@@ -35,30 +36,33 @@
               </button>
 
               <!-- Logo navbar mobile -->
-              <!-- <a href="./index.html">
-                <img class="nav-logo d-block d-md-none my-auto" src="./img/lovevibes.png" alt="logo lovevibes">
-              </a> -->
+              <a href="./index.html">
+                <img class="nav-logo d-block d-md-none my-auto" src="./img/favicon.ico">
+              </a>
 
               <div class="collapse navbar-collapse justify-content-md-center" id="mobile-menu">
                 <ul class="navbar-nav">
                   <li class="nav-item">
-                    <a class="nav-link text-warning active  text-hover-yellow" aria-current="page"
+                    <a id="inicio-link" class="nav-link text-warning active " aria-current="page"
                       href="#inicio">INICIO</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link text-white text-hover-yellow" aria-current="page" href="#sobremi">SOBRE MI</a>
+                    <a id="sobremi-link" class="nav-link text-white" aria-current="page" href="#sobremi">SOBRE MI</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link text-white text-hover-yellow" aria-current="page" href="#formacion">FORMACIÓN</a>
+                    <a id="formacion-link" class="nav-link text-white" aria-current="page"
+                      href="#formacion">FORMACIÓN</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link text-white text-hover-yellow" aria-current="page" href="#experiencia">EXPERIENCIA</a>
+                    <a id="experiencia-link" class="nav-link text-white" aria-current="page"
+                      href="#experiencia">EXPERIENCIA</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link text-white text-hover-yellow" aria-current="page" href="#habilidades">HABILIDADES</a>
+                    <a id="habilidades-link" class="nav-link text-white" aria-current="page" href="#habilidades"
+                      onmouseover="mouseOn()" onmouseout="mouseOut()">HABILIDADES</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link text-white text-hover-yellow" aria-current="page" href="#contacto">CONTACTO</a>
+                    <a id="contacto-link" class="nav-link text-white" aria-current="page" href="#contacto">CONTACTO</a>
                   </li>
                 </ul>
               </div>
@@ -94,13 +98,29 @@
                 Mi nombre es Jonatan aunque comunmente me llaman Jony. Actualmente estoy estudiando el ciclo
                 formativo de grado superior "Desarrollo de Aplicaciones Web" cursando el segundo año. <br><br>
 
-                Me considero una persona organizada, resolutiva y perfeccionista. <br>Me apasiona la música
-                en casi todos sus géneros, viajar y los videojuegos.
+                Empecé a estudiar tras darme cuenta que no tenía motivación estar en trabajos en los que no me
+                gustaba la tarea que desempeñaba. Probé y hoy en día puedo decir que me apasiona lo que estoy
+                estudiando, se me van las horas sin darme cuenta cuando me pongo a programar. Además de programar,
+                también me apasiona la música en casi todos sus géneros, viajar y los videojuegos.<br><br>
+
+                En cuanto a idiomas, el castellano es mi lenguaje nativo, aunque también sé inglés.
               <div class="row text-center mt-5">
                 <div class="icons">
-                  <i class="bi bi-music-note-beamed mx-3"></i>
-                  <i class="bi bi-airplane mx-3"></i>
-                  <i class="bi bi-controller mx-3"></i>
+                  <span class="d-inline-block" tabindex="0" data-bs-toggle="popover" data-bs-placement="top"
+                    data-bs-trigger="hover focus" data-bs-content="Música">
+                    <i class="bi bi-music-note-beamed mx-3"></i>
+                  </span>
+
+                  <span class="d-inline-block" tabindex="0" data-bs-toggle="popover" data-bs-placement="top"
+                    data-bs-trigger="hover focus" data-bs-content="Viajar">
+                    <i class="bi bi-airplane mx-3"></i>
+                  </span>
+
+                  <span class="d-inline-block" tabindex="0" data-bs-toggle="popover" data-bs-placement="top"
+                    data-bs-trigger="hover focus" data-bs-content="Videjuegos">
+                    <i class="bi bi-controller mx-3"></i>
+                  </span>
+
                 </div>
               </div>
             </div>
@@ -260,7 +280,7 @@
 
           <div class="mb-3">
             <label class="form-label text-light" for="emailAddress">Email</label>
-            <input class="form-control" id="emailAddress" type="email" placeholder="Email" required />
+            <input class="form-control" id="email" type="email" placeholder="Email" required />
           </div>
 
           <div class="mb-3">
@@ -270,9 +290,9 @@
           </div>
 
           <div class="text-center">
-            <button class="btn btn-primary btn-lg bg-warning text-black border-warning" type="submit">Enviar</button>
+            <button id="btn-input" class="btn btn-primary btn-lg bg-warning text-black border-warning" type="submit">Enviar</button>
           </div>
-
+          
         </form>
       </div>
     </section>
@@ -280,13 +300,17 @@
     <footer class="bg-dark text-center text-white">
       <div class="container p-4 pb-0">
         <section class="mb-4">
-          <a class="btn btn-outline-light btn-floating m-1 rounded-circle" href="https://twitter.com/JonyGarcia_" role="button"><i class="bi bi-twitter"></i></a>
+          <a class="btn btn-outline-light btn-floating m-1 rounded-circle" href="https://twitter.com/JonyGarcia_"
+            role="button"><i class="bi bi-twitter"></i></a>
 
-          <a class="btn btn-outline-light btn-floating m-1 rounded-circle" href="https://www.instagram.com/jonygarcia_/" role="button"><i class="bi bi-instagram"></i></a>
+          <a class="btn btn-outline-light btn-floating m-1 rounded-circle" href="https://www.instagram.com/jonygarcia_/"
+            role="button"><i class="bi bi-instagram"></i></a>
 
-          <a class="btn btn-outline-light btn-floating m-1 rounded-circle" href="https://www.linkedin.com/in/jonatangar/" role="button"><i class="bi bi-linkedin"></i></a>
+          <a class="btn btn-outline-light btn-floating m-1 rounded-circle"
+            href="https://www.linkedin.com/in/jonatangar/" role="button"><i class="bi bi-linkedin"></i></a>
 
-          <a class="btn btn-outline-light btn-floating m-1 rounded-circle" href="https://github.com/Jonygarcia" role="button"><i class="bi bi-github"></i></a>
+          <a class="btn btn-outline-light btn-floating m-1 rounded-circle" href="https://github.com/Jonygarcia"
+            role="button"><i class="bi bi-github"></i></a>
         </section>
       </div>
       <div class="text-center p-3 link-footer">

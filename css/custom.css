@@ -48,11 +48,6 @@ body {
     margin-right: 2px;
 }
 
-.text-hover-yellow:hover {
-    background-color: var(--secondcolor);
-    color: #ffe600 !important;
-}
-
 /** ABOUT ME */
 
 #sobremi {
@@ -177,22 +172,27 @@ body {
     height: 25px;
 }
 
-.php{
+.php {
     animation: php 3s ease-in-out 0.5s forwards;
 }
-.javascript{
+
+.javascript {
     animation: javascript 3s ease-in-out 0.5s forwards;
 }
-.java{
+
+.java {
     animation: java 3s ease-in-out 0.5s forwards;
 }
-.mysql{
+
+.mysql {
     animation: mysql 3s ease-in-out 0.5s forwards;
 }
-.html{
+
+.html {
     animation: html 3s ease-in-out 0.5s forwards;
 }
-.css{
+
+.css {
     animation: css 3s ease-in-out 0.5s forwards;
 }
 
@@ -203,7 +203,7 @@ body {
     height: 10rem;
 }
 
-.div-phone  {
+.div-phone {
     padding-left: 20px;
 }
 
@@ -223,18 +223,24 @@ body {
 /** ANIMACIONES */
 
 /* FADE TEXT BANNER */
-.hide-text{
+.hide-text {
     animation: fade 3.5s;
-    
-}
-@keyframes fade{
-    0%{opacity: 0;}
-    100%{opacity: 1;}
+
 }
 
-.show-text{
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.show-text {
     animation: fade 3.5s;
-   
+
 }
 
 /* SCROLL TIMELINE */
@@ -248,39 +254,71 @@ body {
 /* FILL PROGRESS BARS */
 
 @keyframes php {
-    0%{width: 0;}
-    100%{width: 85%;}
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 85%;
+    }
 }
+
 @keyframes javascript {
-    0%{width: 0;}
-    100%{width: 72%;}
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 72%;
+    }
 }
+
 @keyframes java {
-    0%{width: 0;}
-    100%{width: 70%;}
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 70%;
+    }
 }
+
 @keyframes mysql {
-    0%{width: 0;}
-    100%{width: 75%;}
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 75%;
+    }
 }
+
 @keyframes html {
-    0%{width: 0;}
-    100%{width: 90%;}
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 90%;
+    }
 }
+
 @keyframes css {
-    0%{width: 0;}
-    100%{width: 77%;}
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 77%;
+    }
 }
-
-
-
 
 /** TABLET PARAMS */
 
 @media screen and (max-width: 991px) {
 
     .presentacion p {
-        margin-top: 25vh; 
+        margin-top: 25vh;
     }
 
     .badge {
@@ -329,7 +367,7 @@ body {
     }
 
     /** CONTACTO */
-    .div-phone  {
+    .div-phone {
         padding-left: 0px;
     }
 
